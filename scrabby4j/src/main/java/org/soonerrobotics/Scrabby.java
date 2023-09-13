@@ -57,8 +57,8 @@ public class Scrabby extends Thread {
         message.topic = topic;
         message.msg = gson.toJsonTree(data, type);
 
-        out.write(gson.toJson(message) + "\n\n");
-        // System.out.println(gson.toJson(message));
+        out.write(gson.toJson(message));
+        out.flush();
     }
         
 }
